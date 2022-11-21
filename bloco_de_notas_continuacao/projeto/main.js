@@ -21,6 +21,8 @@ const criandoCalendario = (evento) => {
 
     const tarefa = criarTarefa(dados);
     lista.appendChild(tarefa);
+    //Armazenando dados 
+    sessionStorage.setItem("tarefas", JSON.stringfy(dados))
     input.value = " ";
 }
 
@@ -30,8 +32,7 @@ const criarTarefa = ({valor, dataFormatada}) => {
 
     tarefa.classList.add('task');
 
-    const conteudo = `<p class="content">${dataFormatada} *
-    ${valor} </p>`;
+    const conteudo = `<p class="content">${dataFormatada} * ${valor} </p>`;
 
     tarefa.innerHTML = conteudo;
 
