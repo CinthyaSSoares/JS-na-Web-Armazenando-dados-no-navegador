@@ -1,6 +1,7 @@
 
-import BotaoConclui from './concluiTarefa.js'; //Nome da função a ser exportada e local 
-import BotaoDeleta from './deletaTarefa.js';
+import { BotaoConclui } from './concluiTarefa.js'; //Nome da função a ser exportada e local 
+import { BotaoDeleta } from './deletaTarefa.js';
+import { carregaTarefa } from './CarregaTarefa.js'
 
 export const criandoCalendario = (evento) => {
     evento.preventDefault();
@@ -24,7 +25,9 @@ export const criandoCalendario = (evento) => {
 
     //Armazenando dados 
     localStorage.setItem('tarefas', JSON.stringify(tarefasAtualizadas))
-    input.value = " ";
+    input.value = " "; //limpar o valor do imput
+
+    carregaTarefa();
 }
 
 export const Tarefa = ({valor, dataFormatada}) => {

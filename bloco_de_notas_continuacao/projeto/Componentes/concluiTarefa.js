@@ -1,5 +1,5 @@
 
-const BotaoConclui = () => {
+export const BotaoConclui = () => {
     const botaoConclui = document.createElement('button');
 
     botaoConclui.classList.add('check-button');
@@ -9,7 +9,7 @@ const BotaoConclui = () => {
     return botaoConclui;
 }
 
-const concluirTarefa = (evento) => {
+export const concluirTarefa = (evento) => {
     const botaoConclui = evento.target;
 
     const tarefaCompleta = botaoConclui.parentElement;

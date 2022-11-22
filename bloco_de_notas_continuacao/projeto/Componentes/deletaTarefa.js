@@ -1,5 +1,5 @@
 
-const BotaoDeleta = () => {
+export const BotaoDeleta = () => {
     const botaoDeleta = document.createElement('button');
     botaoDeleta.classList.add('delete-button');
     botaoDeleta.innerText = 'DELETAR';
@@ -8,7 +8,7 @@ const BotaoDeleta = () => {
     return botaoDeleta;
 }
 
-const deletarTarefa = (evento) => {
+export const deletarTarefa = (evento) => {
     const botaoDeleta = evento.target;
     
     const tarefaCompleta = botaoDeleta.parentElement;
@@ -18,4 +18,3 @@ const deletarTarefa = (evento) => {
     return botaoDeleta;
 }
 
-export default BotaoDeleta;
