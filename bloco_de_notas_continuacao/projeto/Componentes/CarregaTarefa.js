@@ -1,6 +1,5 @@
 import { criaData } from "./CriaData.js";
-import { removeDatasRepetidas } from "../service/data.js";
-
+import { removeDatasRepetidas, ordenaDatas } from "../service/data.js";
 
 export const carregaTarefa = () => { //aparecendo as tarefas
     const lista = document.querySelector('[data-list]');
@@ -9,7 +8,7 @@ export const carregaTarefa = () => { //aparecendo as tarefas
     lista.innerHTML = " "; //limpando a lista para não repetir quando atualiza
 
     const datasUnicas = removeDatasRepetidas(tarefasCadastradas);
-
+    ordenaDatas(datasUnicas)
     datasUnicas.forEach((dia) => {
 
         lista.appendChild(criaData(dia))
