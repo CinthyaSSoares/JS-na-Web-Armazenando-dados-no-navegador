@@ -43,6 +43,16 @@ body {
   background-color: #DDF8E7;
   border-color: rgba(255, 255, 255, 0.1);
 }
+
+.form-input-date {
+  outline: none;
+  background-color: #caf5da;
+  border-color: rgba(255, 255, 255, 0.1)
+  
+
+}
+
+
 .form-button {
   border: 1px;
   border-radius: 5px;
@@ -60,6 +70,10 @@ body {
   padding: 0;
   list-style: none;
   width: 100%;
+}
+
+.conteudo__data {
+  color:#14723d
 }
 
 .task {
