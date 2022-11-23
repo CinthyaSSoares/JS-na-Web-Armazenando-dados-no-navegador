@@ -8,13 +8,13 @@ export const criaData = (data) => {
 
     dataTop.innerHTML = conteudoLi;
 
-    tarefas.forEach((tarefa => {
+    tarefas.forEach(((tarefa,id) => {
         const dia = moment(tarefa.dataFormatada, 'DD/MM/YYYY');
 
         const diff = dataMoment.diff(dia);
         
         if(diff == 0) {
-            dataTop.appendChild(Tarefa(tarefa))
+            dataTop.appendChild(Tarefa(tarefa,id))
         }
     }))
 
